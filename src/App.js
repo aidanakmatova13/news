@@ -17,6 +17,7 @@ function App() {
             <Route path='/register'><Register/></Route>
             <Route path='/login'><Login/></Route>
             <Route path='*'><Notfound/></Route>
+            <Route path='/*'><Notfound/></Route>
         </Switch>
     </Router>
   );

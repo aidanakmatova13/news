@@ -16,7 +16,7 @@ img{
 }
 .box{
     margin-bottom: 30px;
-    height: 400px;
+    height: 350px;
     transition: .5s;
     box-shadow: 0 0 18px -2px #000000;
 }

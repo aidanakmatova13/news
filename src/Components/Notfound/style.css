@@ -1,3 +1,8 @@
 .error{
     margin: auto;
 }
+.error-title{
+    color: #EC4524;
+    text-align: center;
+    margin-top: 40px;
+}
