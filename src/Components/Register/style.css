@@ -1,0 +1,14 @@
+.sub-btn{
+    border: none;
+    background-color: #E31E24;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: whitesmoke;
+    margin-top: 30px;
+}
+input{
+    background-color: #F1EAEAFF;
+}
+label{
+    font-size: 20px;
+}

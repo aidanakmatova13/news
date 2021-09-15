@@ -1,3 +1,12 @@
 .footer{
-    background-color: lightsteelblue;
+    background-color: #E31E24;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+h4{
+    color: black;
+}
+.logo-img{
+    width: 100px;
+    height: 100px;
 }

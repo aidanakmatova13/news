@@ -1,6 +1,18 @@
 .header{
-    background-color: lightsteelblue;
+    background-color: #E31E24;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 .d-flex{
     align-items: center;
+}
+.logo-img{
+    width: 120px;
+    height: 120px;
+}
+h5{
+    color: black;
+}
+a{
+    list-style: none;
 }

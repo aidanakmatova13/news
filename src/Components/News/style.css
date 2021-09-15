@@ -1,0 +1,29 @@
+
+img{
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-3{
+    width: 33.33%;
+    padding: 0 15px;
+}
+.news-img{
+    height: 200px;
+}
+.box{
+    margin-bottom: 30px;
+    height: 400px;
+    transition: .5s;
+    box-shadow: 0 0 18px -2px #000000;
+}
+.title-box{
+    padding: 10px;
+}
+.box:hover{
+    box-shadow: 0 0 22px 5px black;
+    transform: scale(.9);
+}

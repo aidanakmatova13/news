@@ -2,7 +2,8 @@ import Layout from "../Layout";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import './news.css'
+import './style.css'
+import GoBack from "../GoBack";
 
 const News = () => {
     const [news, setNews] = useState([])
@@ -13,15 +14,18 @@ const News = () => {
     return (
         <Layout>
             <div className='container my-5'>
-                <div className='grid'>
+                <GoBack/>
+                <div className='row'>
                     {
                         news.map(el =>
-                            <Link to={`/news/${el.id}`}>
-                                <div key={el.id} className='box'>
-                                    <img src={el.img} alt=""/>
-                                    <h4>{el.title}</h4>
+                            <div key={el.id} className='col-4'>
+                                <div className='box'>
+                                    <Link to={`/news/${el.id}`}>
+                                        <img className='news-img' src={el.img} alt=""/>
+                                        <div className='title-box'><h5>{el.title}</h5></div>
+                                    </Link>
                                 </div>
-                            </Link>
+                            </div>
                         )
                     }
                 </div>

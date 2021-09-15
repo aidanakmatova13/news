@@ -12,7 +12,7 @@ function App() {
     <Router classname='container'>
         <Switch>
             <Route exact path='/'><Homepage/></Route>
-            <Route path='/news'><News/></Route>
+            <Route exact path='/news'><News/></Route>
             <Route path='/news/:id'><New/></Route>
             <Route path='/register'><Register/></Route>
             <Route path='/login'><Login/></Route>

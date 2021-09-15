@@ -1,7 +1,11 @@
-import error from './img/44-incredible-404-error-pages@3x.webp'
+import error from './img/404.png'
+import './style.css'
+
 const Notfound = () =>{
     return(
-        <img src={error} alt=""/>
+        <div className='error'>
+            <img src={error} alt=""/>
+        </div>
     )
 }
-export default Notfound
+export default Notfound;
