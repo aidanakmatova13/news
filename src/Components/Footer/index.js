@@ -8,7 +8,7 @@ const Footer = () =>{
                 <div className='container'>
                     <div className='d-flex justify-content-between'>
                         <h4>
-                            &#xA9; Aidana Akmatova
+                            &#xA9; Aidana Akmatova 2021 | All rights reserved
                         </h4>
                         <img className='logo-img' src={logo} alt=""/>
                     </div>

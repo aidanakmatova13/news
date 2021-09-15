@@ -4,13 +4,22 @@ import {Link} from "react-router-dom";
 import axios from "axios";
 import './style.css'
 import GoBack from "../GoBack";
+import Spinner from "../Spinner";
+
 
 const News = () => {
     const [news, setNews] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         axios('https://613d36a694dbd600172ab88f.mockapi.io/api/news')
-            .then(({data}) => setNews(data))
+            .then(({data}) => {
+                    setNews(data)
+                    setIsLoading(false)
+            })
     }, [])
+    if (isLoading){
+        return <Spinner/>
+    }
     return (
         <Layout>
             <div className='container my-5'>

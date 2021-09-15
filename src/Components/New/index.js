@@ -4,14 +4,27 @@ import axios from "axios";
 import Layout from "../Layout";
 import './new.css'
 import GoBack from "../GoBack";
+import Spinner from "../Spinner";
+import Notfound from "../Notfound";
 
 const New = () =>{
     const [info, setInfo] = useState({})
     const {id} = useParams()
+    const [isLoading, setIsLoading] = useState(true)
+    const [notFound, setNotFound] = useState(false)
     useEffect(() =>{
         axios(`https://613d36a694dbd600172ab88f.mockapi.io/api/news/${id}`)
             .then(({data}) => setInfo(data))
+            .catch(() => setNotFound(true))
+            .finally(() => setIsLoading(false))
     },[id])
+
+    if (isLoading){
+        return <Spinner/>
+    }
+    if (notFound){
+        return <Notfound/>
+    }
     return (
         <Layout>
             <div className='container my-5'>

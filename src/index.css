@@ -9,7 +9,15 @@
 body{
     font-family: 'Abel', sans-serif;
 }
+a{
+    list-style: none;
+    text-decoration: none;
+}
 .register{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.active {
+    border-bottom: 1px solid whitesmoke;
+}
+
