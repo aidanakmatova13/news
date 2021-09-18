@@ -16,3 +16,44 @@ h5{
 a{
     list-style: none;
 }
+.callback{
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+.modal-window{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.modal-content{
+    max-width: 50%;
+    padding: 15px;
+    position: relative;
+}
+.close-modal{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+}
+.form-input{
+    width: 100%;
+    border: 1px solid #E31E24;
+    height: 50px;
+}
+.send-btn{
+    border: none;
+    border-radius: 10px;
+    background-color: #E31E24;
+    color: whitesmoke;
+    padding: 8px;
+}

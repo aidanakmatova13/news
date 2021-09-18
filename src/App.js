@@ -5,6 +5,7 @@ import Register from "./Components/Register";
 import Homepage from "./Components/Homepage";
 import Notfound from "./Components/Notfound";
 import New from "./Components/New";
+import Requests from "./Components/Requests";
 
 
 function App() {
@@ -15,14 +16,12 @@ function App() {
             <Route exact path='/news'><News/></Route>
             <Route path='/news/:id'><New/></Route>
             <Route path='/register'><Register/></Route>
+            <Route path='/requests'><Requests/></Route>
             <Route path='/login'><Login/></Route>
             <Route path='*'><Notfound/></Route>
-            <Route path='/*'><Notfound/></Route>
         </Switch>
     </Router>
   );
 }
 
 export default App;
-
-//активные ссылки
