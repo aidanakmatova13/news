@@ -1,0 +1,36 @@
+button{
+    border: none;
+    background-color: #E31E24;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
+}
+.edit-btn, .del-btn{
+    display: unset;
+    margin-left: 10px;
+}
+.edit-btn{
+    background-color: lightseagreen;
+}
+.modal-window{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.modal-content{
+    max-width: 50%;
+    padding: 15px;
+    position: relative;
+}
+.text-red{
+    color: #E31E24;
+}

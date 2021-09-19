@@ -30,10 +30,10 @@ const Requests = () =>{
                 <table className="table my-5">
                 <thead className='table-top'>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Phone number</th>
-                    <th scope="col">Email address</th>
+                    <th scope="col">№</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Номер телефона</th>
+                    <th scope="col">Адрес электронной почты</th>
                 </tr>
                 </thead>
                 <tbody>

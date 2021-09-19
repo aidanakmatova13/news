@@ -1,12 +1,10 @@
 import './style.css'
-import GoBack from "../GoBack";
-import Layout from "../Layout";
+import Layout from "../../Components/Layout";
 
 const Register = () =>{
     return(
         <Layout>
-            <div className='container'>
-                <GoBack/>
+            <div className='container d-flex justify-content-center align-items-center'>
                 <div className='register'>
                 <div><label htmlFor='name'>Name</label></div>
                 <div><input type="text" id='name' placeholder='Your name...'/></div>

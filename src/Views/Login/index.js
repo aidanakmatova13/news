@@ -1,11 +1,10 @@
 import './style.css'
-import GoBack from "../GoBack";
+import Layout from "../../Components/Layout";
 
 const Login = () =>{
     return(
-        <>
-            <div className='container'>
-                <GoBack/>
+        <Layout>
+            <div className='container  d-flex justify-content-center align-items-center'>
                 <div className='login'>
                 <div><label htmlFor='email'>Email address</label></div>
                 <div><input type="text" id='email' placeholder='e-mail'/></div>
@@ -14,7 +13,7 @@ const Login = () =>{
                 <div><button className='login-btn' type='submit'>Login</button></div>
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }
 export default Login;

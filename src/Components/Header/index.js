@@ -38,6 +38,7 @@ const Header = () => {
                         <NavLink to='/requests'><h5 className='mr-3'>Заявки</h5></NavLink>
                         <NavLink to='/login'><h5 className='mr-3'>Войти</h5></NavLink>
                         <NavLink to='/register'><h5  className='mr-3'>Зарегистрироваться</h5></NavLink>
+                        <NavLink to='/students'><h5  className='mr-3'>Студенты</h5></NavLink>
                         <button onClick={() => setIsOpen(true)} className='callback'>Свяжитесь со мной</button>
                     </div>
                 </div>
