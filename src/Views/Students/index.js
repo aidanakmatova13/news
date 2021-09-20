@@ -10,6 +10,7 @@ import StudentItem from "../../Components/StudentItem";
 const Students = () =>{
     const [students,setStudents] = useState([]) //чтобы значение меняласьи выводилось визуально
     const [isOpen, setIsOpen] = useState(false)
+    const [isOpenEdit, setIsOpenEdit] = useState(false)
     const {register, handleSubmit, formState: {errors}, reset} = useForm()
     const [isLoading, setIsLoading] = useState(true)
 
@@ -49,13 +50,17 @@ const Students = () =>{
                         <th scope="col">Имя</th>
                         <th scope="col">Номер телефона</th>
                         <th scope="col">Контракт</th>
-                        <th scope="col"></th>
+                        <th scope="col">Оплачено</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Группа</th>
+                        <th scope="col">Ноутбук</th>
+                        <th scope="col">Комментарии</th>
                     </tr>
                     </thead>
                     <tbody>
                     {
                         students.map((el,idx) =>
-                            <StudentItem key={el.id} el={el} idx={idx} delData={delData}/>
+                            <StudentItem key={el.id} el={el} idx={idx} delData={delData} setIsOpenEdit={setIsOpenEdit}/>
                         )
                     }
                     </tbody>
@@ -67,26 +72,52 @@ const Students = () =>{
                     {
                         isOpen &&
                             <form onSubmit={handleSubmit(sendData)}>
-                                <div className="form-group">
-                                    <label htmlFor="name">Ваше имя:</label>
-                                    <input name='name' id='name' className='form-input' type="text"
+                                <div className="form-group d-flex justify-content-between">
+                                    <label>Ваше имя:
+                                    <input name='name' className='form-input' type="text"
                                            {...register('name', {required:true})}
                                     />
+                                    </label>
                                     {errors.name && <div className='text-red'>Заполните поле*</div>}
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="phone">Ваш телефон:</label>
-                                    <input name='phone' id='phone' className='form-input'  type="text"
+
+                                    <label>Ваш телефон:
+                                    <input name='phone' className='form-input'  type="number"
                                            {...register('phone', {required:true})}
                                     />
+                                    </label>
                                     {errors.phone && <div className='text-red'>Заполните поле*</div>}
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="contract">Контракт:</label>
-                                    <input name='contract' id='contract' className='form-input'  type="text"
+                                <div className="form-group d-flex justify-content-between">
+                                    <label>Контракт:
+                                    <input name='contract' className='form-input'  type="number"
                                            {...register('contract', {required:true})}
                                     />
+                                    </label>
                                     {errors.contract && <div className='text-red'>Заполните поле*</div>}
+
+                                    <label>Оплачено:
+                                    <input name='ispaid' className='form-input'  type="number"
+                                           {...register('ispaid', {required:true})}
+                                    />
+                                    </label>
+                                    {errors.ispaid && <div className='text-red'>Заполните поле*</div>}
+                                </div>
+
+                                <div className="form-group">
+                                    <label>Ноутбук:
+                                        <input name='notebook' className='form-input'  type="text"
+                                               {...register('notebook', {required:true})}
+                                        />
+                                    </label>
+                                    {errors.notebook && <div className='text-red'>Заполните поле*</div>}
+
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="comments">Ваш комментарий:</label>
+                                    <textarea name="comments" id="comments" style={{width: "100%"}} cols='5' placeholder='Комментарий...'
+                                              {...register('comments')}
+                                    />
+                                    {errors.comments && <div className='text-red'>Заполните поле*</div>}
                                 </div>
                                 <button className='send-btn' type="submit">Добавить</button>
                             </form>
